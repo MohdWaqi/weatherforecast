@@ -1,5 +1,6 @@
 import { useRef } from "react"
 import NavBar from "./Components/NavBar"
+import ForecastDisplay from "./Components/ForecastDisplay"
 
 function App() {
 const toggleBtn = useRef(null)
@@ -17,10 +18,14 @@ console.log(toggleBtn.current.checked)
             <input ref={toggleBtn} type="checkbox" name="color_mode" id="color_mode"onClick={handleClick}/>
             <label htmlFor="color_mode" data-on="F" data-off="C" className="btn-color-mode-switch-inner"></label>
         </label>
-      
-
-  
       </div>
+    </div>
+    <div id="forecast">
+    <ForecastDisplay/>
+    <ForecastDisplay/>
+    <ForecastDisplay/>
+    <ForecastDisplay/>
+    <ForecastDisplay/>
     </div>
 
     </div>

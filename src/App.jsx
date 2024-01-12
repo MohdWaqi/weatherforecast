@@ -1,8 +1,12 @@
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import NavBar from "./Components/NavBar"
 import ForecastDisplay from "./Components/ForecastDisplay"
 
+
+
 function App() {
+  
+  
 const toggleBtn = useRef(null)
 const handleClick =(e)=>{
 console.log(toggleBtn.current.checked)
@@ -26,6 +30,9 @@ console.log(toggleBtn.current.checked)
     <ForecastDisplay/>
     <ForecastDisplay/>
     <ForecastDisplay/>
+    </div>
+    <div>
+      
     </div>
 
     </div>

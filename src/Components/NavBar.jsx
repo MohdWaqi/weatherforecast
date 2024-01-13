@@ -14,7 +14,7 @@ const NavBar = () => {
   const getCoordinates = async (city) => {
     try {
       let res = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURI(
+        `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURI(
           city
         )}&limit=1&appid=${apiKey}`
       );

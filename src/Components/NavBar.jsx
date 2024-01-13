@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 import search from "../assets/search.svg";
 import { DataContext } from "../Context/DataProvider";
 const apiKey = "6c385b8e770ddeb8ca50f34e34a5f48a";

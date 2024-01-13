@@ -26,4 +26,24 @@
   #forecast img{
     width:50%
   }
+  @media screen and (max-width:768px){
+    #forecast{
+      margin-top:90%;
+      width:90%;
+      flex-direction:column;
+      margin-left:4%
+    }
+    #forecast>div{
+      flex-direction:row
+    }
+    #forecast img{
+      width:30%
+    } 
+    .temperature{
+      width:20%
+    }
+    h3{
+      font-size:1rem
+    }
+  }
   

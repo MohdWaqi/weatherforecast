@@ -6,7 +6,7 @@ const ForecastDisplay = ({day, temp,description, icon}) => {
       
       <h3>{day}</h3>
       <img src={`https://openweathermap.org/img/wn/${icon}.png`}/>
-      <h3>{temp}</h3>
+      <h3 className='temperature'>{temp}</h3>
       <h4>{description}</h4>
     </div>
   )

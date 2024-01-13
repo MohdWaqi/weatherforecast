@@ -135,7 +135,9 @@ label {
   flex-direction: column;
   align-items: center;
   gap:10px;
-  margin-bottom:10%
+  margin-bottom:10%;
+  text-align:center;
+
 }
 #forecast +div > div>:nth-child(2) img{
   width:25%
@@ -163,6 +165,39 @@ h4{
   font-size:4rem;
   left:10%;
   max-width:45%
+}
+@media screen and (max-width:768px){
+  .home{
+    background-size:cover
+  }
+  .home > h1{
+    display:none
+  }
+  #forecast+div{
+    width:80%;
+    right: 10%;
+    top:10%;
+    padding:2%;
+    border-radius:30px;
+   
+  }
+  label{
+    font-size:1.2rem;
+    
+  }
+  div.btn-container{
+    position:fixed;
+    bottom:40%;
+    right: 2%;
+    padding:0;
+    z-index:1;
+  }
+  .details{
+    grid-template-columns: repeat(2, 1fr)
+  }
+  .app{
+    height: max-content
+  }
 }
 
 

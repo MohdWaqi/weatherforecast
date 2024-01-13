@@ -37,3 +37,20 @@ nav img{
 nav img:hover{
 background-color:gray
 }
+@media screen and (max-width:768px) {
+    nav{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        margin:0 5%
+    }
+    nav h1{
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        letter-spacing:5px
+    }
+    nav > div{
+        width: max-content
+    }
+    
+}

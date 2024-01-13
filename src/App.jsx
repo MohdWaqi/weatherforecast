@@ -3,10 +3,13 @@ import NavBar from "./Components/NavBar";
 import ForecastDisplay from "./Components/ForecastDisplay";
 import CurrentDetails from "./Components/CurrentDetails";
 import { DataContext } from "./Context/DataProvider";
+import { useMediaQuery } from 'react-responsive'
 const apiKey = "6c385b8e770ddeb8ca50f34e34a5f48a";
 const date = new Date();
 
+
 function App() {
+  const isMobile = useMediaQuery({query:"(min-width: 768px)"})
   const {data, toggleFormat, setToggleFormat, err} = useContext(DataContext)
   const [forecastData, setForecast] = useState({})
   useEffect(()=>{
@@ -23,7 +26,6 @@ function App() {
         `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`
       );
       let data = await res.json();
-      console.log(data)
       setForecast(data)
 
     } catch (error) {
@@ -57,7 +59,7 @@ function App() {
       </div>
       <div>
         <div id="forecast">
-          {forecastData.list&&forecastData.list.filter((ele, index)=> index%8==0).map((ele, index)=>{let date= new Date(ele.dt_txt); return<ForecastDisplay day={date.toDateString()} temp={toggleFormat?Math.floor(ele.main.temp - 273.15)*9/5+32 + " °":Math.floor(ele.main.temp - 273.15)+ " °"} description={ele.weather[0].description} icon={ele.weather[0].icon}/>})}
+          {forecastData.list&&forecastData.list.filter((ele, index)=> index%8==0).map((ele, index)=>{let date= new Date(ele.dt_txt); return<ForecastDisplay key={index} day={date.toDateString()} temp={toggleFormat?Math.floor(ele.main.temp - 273.15)*9/5+32 + " °":Math.floor(ele.main.temp - 273.15)+ " °"} description={ele.weather[0].description} icon={ele.weather[0].icon}/>})}
           
         </div>
         <div>
@@ -78,9 +80,10 @@ function App() {
               </h3>
             </div>
             <div>
-              {data.weather&&<img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`}/>}
-              {data.weather&&<h3>{data.weather[0].description}</h3>}
-              {data.weather&&<h1>{toggleFormat?Math.floor(data.main.temp - 273.15)*9/5+32 + " °F":Math.floor(data.main.temp - 273.15) + " °C"}</h1>}
+            {data.weather&&<img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`}/>}
+            {data.weather&&<h3>{data.weather[0].description}</h3>}
+            {data.weather&&<h1>{toggleFormat?Math.floor(data.main.temp - 273.15)*9/5+32 + " °F":Math.floor(data.main.temp - 273.15) + " °C"}</h1>}
+              {!isMobile&&<h1>{err?"Something Went Wrong":data.name?`${data.name}, ${data.sys?.country}`:"Please Wait..."}</h1>}
             </div>
             {data.weather&&<div className="details">
               <CurrentDetails heading="Minumum" value={toggleFormat?Math.floor(data.main.temp_min - 273.15)*9/5+32 + " °":Math.floor(data.main.temp_min - 273.15)+ " °"} />

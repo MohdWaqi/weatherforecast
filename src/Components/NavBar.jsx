@@ -35,7 +35,6 @@ const NavBar = () => {
             `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`
           );
           let data = await res.json();
-          console.log(data);
           setData(data)
         } catch (error) {
           console.log(error);
@@ -46,7 +45,7 @@ const NavBar = () => {
         <h1>Weather Forecast</h1>
         <div onMouseEnter={()=>{setSearch(true)}} onMouseLeave={()=>{setSearch(false)}}>
             {isSearch&&<input placeholder='Type the city name...' value={searchedCity} onChange={(e)=>{setSearchedCity(e.target.value)}}/>}
-            <img src={search} alt='search' onClick={()=>{searchedCity!==""&&getCoordinates(searchedCity)}}/>
+            <img src={search} alt='search' onClick={()=>{searchedCity!==""&&getCoordinates(searchedCity); setSearchedCity("")}}/>
         </div>
     </nav>
   )

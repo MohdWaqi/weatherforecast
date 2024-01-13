@@ -4,7 +4,7 @@
 > - It is responsive.
 
 ## Deploy Link
-> 
+> https://mohdwaqi.github.io/weatherforecast/
 
 ## Desktop View
 [![Weather-Forecast-Google-Chrome-13-01-2024-13-10-38.png](https://i.postimg.cc/4xjQ7Fqf/Weather-Forecast-Google-Chrome-13-01-2024-13-10-38.png)](https://postimg.cc/zySg4pq6)

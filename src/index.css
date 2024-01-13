@@ -11,7 +11,8 @@
 }
 .app{
   height:100vh;
-  background-color: #CE991D
+  background-color: #CE991D;
+  position: relative
 }
 
 div.btn-container{
@@ -111,9 +112,53 @@ label {
   top:5%;
 }
 
+.home+div{
+  display:flex;
+  justify-content: space-between;
+  margin:auto 5%
+}
+#forecast+div{
+  width:30%;
+  position:absolute;
+  right: 5%;
+  top:30%;
+  padding:2%;
+  border-radius:30px;
+  background-color:#DEB045;
+  color:white
+}
+#forecast +div > div>:first-child{
+  display:flex;
+  justify-content: space-between;
+}
+#forecast +div>div >:nth-child(2){
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-
+.details{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  
+}
+h4{
+  font-weight:500;
+  color:#EFDFBA
+}
+#forecast+div>div{
+  padding:8%;
+  background-color:#BB8919;
+  border-radius:20px
+}
+.home > h1{
+  color:white;
+  position:absolute;
+  top:30%;
+  font-size:4rem;
+  left:20%
+}
 
 
 

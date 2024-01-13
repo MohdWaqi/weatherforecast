@@ -1,11 +1,11 @@
 import React from 'react'
 import "./CurrentDetails.css"
 
-const CurrentDetails = () => {
+const CurrentDetails = ({heading, value}) => {
   return (
     <div>
-              <h4>Minimum</h4>
-              <h3>temp</h3>
+              <h4>{heading}</h4>
+              <h3>{value}</h3>
             </div>
   )
 }

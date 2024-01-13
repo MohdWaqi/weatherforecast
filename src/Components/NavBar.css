@@ -30,3 +30,10 @@ nav > h1{
     color:white;
     letter-spacing:8px
 }
+nav img{
+    border-radius:30px;
+    transition:all 0.7s
+}
+nav img:hover{
+background-color:gray
+}

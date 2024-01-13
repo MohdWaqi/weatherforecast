@@ -10,7 +10,7 @@ const NavBar = () => {
   }, []);
   const [isSearch, setSearch] = useState(false);
   const [searchedCity, setSearchedCity] = useState("");
-  const { setData, setErr, setForecast } = useContext(DataContext);
+  const { setData, setErr } = useContext(DataContext);
   const getCoordinates = async (city) => {
     try {
       let res = await fetch(

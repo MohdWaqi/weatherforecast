@@ -1,8 +1,24 @@
-# React + Vite
+# Weather Forecast App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> - With the help of this application anyone can know the current temperature as well as next 5 days predicted temperatures of the desired city.
+> - It is responsive.
 
-Currently, two official plugins are available:
+## Deploy Link
+> 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Desktop View
+[![Weather-Forecast-Google-Chrome-13-01-2024-13-10-38.png](https://i.postimg.cc/4xjQ7Fqf/Weather-Forecast-Google-Chrome-13-01-2024-13-10-38.png)](https://postimg.cc/zySg4pq6)
+
+## Mobile View
+[![Weather-Forecast-Google-Chrome-13-01-2024-13-11-29.png](https://i.postimg.cc/0Q4kPDrB/Weather-Forecast-Google-Chrome-13-01-2024-13-11-29.png)](https://postimg.cc/jwz0hWHH)
+
+## Tech Stack Used
+> - HTML
+> - CSS
+> - JavaScript
+> - React.js
+> - Git
+> - Javascript Utilities
+
+## Developer
+> [@MohdWaqi](https://github.com/MohdWaqi)

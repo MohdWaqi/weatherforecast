@@ -1,13 +1,13 @@
-import React from 'react'
-import "./CurrentDetails.css"
+import React from "react";
+import "./CurrentDetails.css";
 
-const CurrentDetails = ({heading, value}) => {
+const CurrentDetails = ({ heading, value }) => {
   return (
     <div>
-              <h4>{heading}</h4>
-              <h3>{value}</h3>
-            </div>
-  )
-}
+      <h4>{heading}</h4>
+      <h3>{value}</h3>
+    </div>
+  );
+};
 
-export default CurrentDetails
+export default CurrentDetails;
